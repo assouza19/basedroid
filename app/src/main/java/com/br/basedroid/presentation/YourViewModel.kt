@@ -40,12 +40,12 @@ class YourViewModel(
             }.onSuccess {
 
                 // Do something case successful
-                _resultSuccess.value = true
+                _resultSuccess.postValue(true)
 
             }.onFailure {
 
                 // Do something case failure
-                _resultSuccess.value = false
+                _resultSuccess.postValue(false)
 
             }
         }
