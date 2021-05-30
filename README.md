@@ -10,7 +10,7 @@ Este projeto deve ser utilizado como base de estudos e/ou consultas para contru�
 [![LinkedIn](https://img.shields.io/static/v1?label=@linkedin&message=@assouza94&color=blue)](https://www.linkedin.com/in/assouza94/)
 
 
-# 🖥️ Tecnologias que utilizei
+## 🖥️ Tecnologias que utilizei
 
 ✨ Kotlin </br>
 ✨ MVVM </br>
@@ -21,10 +21,10 @@ Este projeto deve ser utilizado como base de estudos e/ou consultas para contru�
 ✨ SOLID </br>
 ✨ Clean Architecture </br>
 
-# 🖥️ Próximos passos
+## 🖥️ Próximos passos
 ✨ Testes de UI (Espresso) + Robot Pattern </br>
 ✨ Navigation </br>
 
-# 📖 License
+## 📖 License
 
 Made with love by [Aline Souza](https://github.com/assouza19) 🐼🖤
