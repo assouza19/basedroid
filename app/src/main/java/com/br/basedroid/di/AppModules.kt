@@ -1,7 +1,7 @@
 package com.br.basedroid.di
 
-import com.br.basedroid.data.api.HttpClient
-import com.br.basedroid.data.api.RetrofitClient
+import com.br.basedroid.data.retrofit.HttpClient
+import com.br.basedroid.data.retrofit.RetrofitClient
 import com.br.basedroid.data.api.YourService
 import com.br.basedroid.data.datasource.RemoteDataSource
 import com.br.basedroid.data.datasource.RemoteDataSourceImpl

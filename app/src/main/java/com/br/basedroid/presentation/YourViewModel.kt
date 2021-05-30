@@ -1,5 +1,7 @@
 package com.br.basedroid.presentation
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.br.basedroid.domain.usecase.GetExampleUseCase
@@ -24,6 +26,11 @@ class YourViewModel(
     private val useCase: GetExampleUseCase
 ) : ViewModel() {
 
+    private val _resultSuccess = MutableLiveData<Boolean>().apply { value = false }
+
+    val resultSuccess : LiveData<Boolean>
+        get() = _resultSuccess
+
     fun exampleCallCoroutines() {
 
         viewModelScope.launch(Dispatchers.IO) {
@@ -33,10 +40,12 @@ class YourViewModel(
             }.onSuccess {
 
                 // Do something case successful
+                _resultSuccess.value = true
 
             }.onFailure {
 
                 // Do something case failure
+                _resultSuccess.value = false
 
             }
         }

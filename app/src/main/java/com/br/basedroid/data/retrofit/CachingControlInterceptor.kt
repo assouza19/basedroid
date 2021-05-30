@@ -1,4 +1,4 @@
-package com.br.basedroid.data.api
+package com.br.basedroid.data.retrofit
 
 import okhttp3.CacheControl
 import okhttp3.Interceptor
@@ -6,8 +6,7 @@ import okhttp3.Response
 import java.util.concurrent.TimeUnit
 
 /*
-* Esta classe é responsável por interceptar a chamada da API
-* para implementar o cache de 10 minutos
+* Esta classe é responsável por interceptar a chamada da API para implementar o cache de 10 minutos;
 */
 
 const val CACHE_CONTROL_HEADER = "Cache-Control"

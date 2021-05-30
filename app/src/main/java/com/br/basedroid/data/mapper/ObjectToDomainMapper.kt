@@ -5,8 +5,7 @@ import com.br.basedroid.domain.model.ObjectDomain
 import com.br.basedroid.utils.Mapper
 
 /*
-* Esta classe transforma um objeto da camada de DATA para
-* um objeto da camada de DOMAIN.
+* Esta classe transforma um objeto da camada de DATA para um objeto da camada de DOMAIN.
 * Lembre-se: Quanto mais isoladas suas camadas forem, maior sua
 * flexibilidade para realizar mudanças sem gerar grandes impactos.
 */
