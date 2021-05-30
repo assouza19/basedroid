@@ -22,7 +22,8 @@ Este projeto deve ser utilizado como base de estudos e/ou consultas para contru�
 ✨ Clean Architecture </br>
 
 # 🖥️ Próximos passos
-✨ Testes de UI (Espresso) usando Robot Pattern </br>
+✨ Testes de UI (Espresso) + Robot Pattern </br>
+✨ Navigation </br>
 
 # 📖 License
 
