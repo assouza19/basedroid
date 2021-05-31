@@ -7,6 +7,7 @@ import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Test
+import kotlin.Result.Companion.success
 import kotlin.test.assertEquals
 
 @ExperimentalCoroutinesApi
@@ -17,12 +18,14 @@ class GetExampleUseCaseTest {
     @Test
     fun `when invoke should return success`() = runBlockingTest {
         // Given
-        whenever(repository.getExample()).thenReturn(ObjectPresentation(id = "123"))
+        whenever(repository.getExample()).thenAnswer { success(ObjectPresentation(id = "123")) }
 
         // When
         val result = useCase.invoke()
 
+        val resultExpected = success(ObjectPresentation(id = "123"))
+
         // Then
-        assertEquals(result, ObjectPresentation(id = "123"))
+        assertEquals(result, resultExpected)
     }
 }

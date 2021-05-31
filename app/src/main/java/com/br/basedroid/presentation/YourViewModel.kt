@@ -26,9 +26,9 @@ class YourViewModel(
     private val useCase: GetExampleUseCase
 ) : ViewModel() {
 
-    private val _resultSuccess = MutableLiveData<Boolean>().apply { value = false }
+    private val _resultSuccess = MutableLiveData<Result<Boolean>>().apply { value = Result.success(false) }
 
-    val resultSuccess : LiveData<Boolean>
+    val resultSuccess : LiveData<Result<Boolean>>
         get() = _resultSuccess
 
     fun exampleCallCoroutines() {
@@ -40,12 +40,12 @@ class YourViewModel(
             }.onSuccess {
 
                 // Do something case successful
-                _resultSuccess.postValue(true)
+                _resultSuccess.postValue(Result.success(true))
 
             }.onFailure {
 
                 // Do something case failure
-                _resultSuccess.postValue(false)
+                _resultSuccess.postValue(Result.failure(it))
 
             }
         }

@@ -22,7 +22,8 @@ class YourRepositoryImpl(
 
     private val mapper: ObjectToPresentationMapper = ObjectToPresentationMapper()
 
-    override suspend fun getExample(): ObjectPresentation {
-        return mapper.map(remoteDataSource.getExample())
+    override suspend fun getExample(): Result<ObjectPresentation> {
+        // retorne Result.failure em caso de alguma falha
+        return Result.success(mapper.map(remoteDataSource.getExample()))
     }
 }
