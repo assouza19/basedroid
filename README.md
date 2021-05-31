@@ -3,7 +3,7 @@
 
 ## Descrição
 O objetivo deste projeto é exemplificar o uso das boas práticas na construção de um aplicativo Android.
-Este projeto deve ser utilizado como base de estudos e/ou consultas para contrução de apps mais complexos.
+Este projeto deve ser utilizado como base de estudos e/ou consultas para construção de apps mais complexos.
 
 [![Author](https://img.shields.io/static/v1?label=@author&message=Aline%20Developer&color=important)](https://github.com/assouza19)
 [![Medium](https://img.shields.io/static/v1?label=@medium&message=Siga-me&color=success)](https://medium.com/aline-souza)
