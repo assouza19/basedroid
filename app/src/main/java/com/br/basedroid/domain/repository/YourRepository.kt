@@ -4,5 +4,5 @@ import com.br.basedroid.presentation.model.ObjectPresentation
 
 interface YourRepository {
 
-    suspend fun getExample(): ObjectPresentation
+    suspend fun getExample(): Result<ObjectPresentation>
 }

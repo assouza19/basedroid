@@ -11,6 +11,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Rule
 import org.junit.Test
+import kotlin.Result.Companion.success
 import kotlin.test.assertTrue
 
 @ExperimentalCoroutinesApi
@@ -30,13 +31,15 @@ class YourViewModelTest {
     @Test
     fun `exampleCallCoroutines should call use case`() = runBlockingTest {
         // Given
-        whenever(useCase.invoke()).thenReturn(ObjectPresentation(id = "123"))
+        whenever(useCase.invoke()).thenAnswer { success(ObjectPresentation(id = "123")) }
 
         // When
         viewModel.exampleCallCoroutines()
 
+        val response = viewModel.resultSuccess.value!!.isSuccess
+
         // Then
         verify(useCase).invoke()
-        assertTrue(viewModel.resultSuccess.value!!)
+        assertTrue(response)
     }
 }

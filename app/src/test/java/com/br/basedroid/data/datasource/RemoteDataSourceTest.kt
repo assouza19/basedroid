@@ -30,6 +30,6 @@ class RemoteDataSourceTest {
 
         // Then
         verify(dataSource).getExample()
-        assertEquals("12", result.id)
+        assertEquals("12", result.getOrNull()!!.id)
     }
 }
