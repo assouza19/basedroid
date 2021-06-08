@@ -18,11 +18,11 @@ Este projeto deve ser utilizado como base de estudos e/ou consultas para constru
 ✨ Android Jetpack Components </br>
 ✨ Consumo de API (Coroutines + Retrofit) </br>
 ✨ Testes unitários (Mockito) </br>
+✨ Testes de UI (Espresso) + Robot Pattern </br>
 ✨ SOLID </br>
 ✨ Clean Architecture </br>
 
 ## 🖥️ Próximos passos
-✨ Testes de UI (Espresso) + Robot Pattern </br>
 ✨ Navigation </br>
 
 ## 📖 License
