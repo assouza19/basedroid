@@ -6,6 +6,10 @@ import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 
+/*
+* Essa classe é responsável por preparar o ambiente para que seu teste rode.
+* Por exemplo, se precisar mockar algo ou incluir mais cenários de resposta da API.
+ */
 private const val serverPort = 8080
 
 fun onActivity(func: YourActivityRobot.() -> Unit) = YourActivityRobot().apply { func() }

@@ -17,6 +17,12 @@ import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.junit.Rule
 
+/*
+* Por fim, essa é a classe que literalmente usa o Espresso para realizar as ações.
+* O ideal é que todos os seus testes herdem dela para reutilizar esses métodos criados.
+* Aqui possui apenas 4 funções de exemplo, mas sempre que necessário, basta criar
+* uma nova função para realizar a sua asserção/ação.
+*/
 open class BaseRobot {
 
     @Rule
