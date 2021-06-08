@@ -8,9 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        //TODO normalmente, o padrão para packages é o reverse domain, então nesse caso seria repogit.br.com ou repogit.com.br?
-        // Caso for o repogit.com.br o certo é deixar o pacote como br.com.repogit
-        applicationId "com.br.repogit"
+        applicationId "com.br.basedroid"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
@@ -18,7 +16,7 @@ android {
 
         multiDexEnabled true
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.br.basedroid.utils.MockTestRunner"
     }
 
     testOptions {
@@ -28,6 +26,10 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled false
+        }
+
+        debug {
             minifyEnabled false
         }
     }
@@ -90,8 +92,9 @@ dependencies {
     testImplementation 'org.mockito:mockito-inline:2.13.0'
     testImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     testImplementation 'androidx.arch.core:core-testing:2.1.0'
+
+    androidTestImplementation 'org.mockito:mockito-android:3.3.3'
     androidTestImplementation "androidx.test.espresso:espresso-contrib:3.3.0"
     androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.3.0'
-    androidTestImplementation "com.jakewharton.espresso:okhttp3-idling-resource:1.0.0"
 }
